@@ -1,0 +1,78 @@
+/* General styles */
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Container with backdrop effect */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+
+/* Login box */
+
+.login-box {
+    width: 350px;
+    padding: 2em;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+/* Form styles */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-bottom: 2px solid #61dafb;
+}
+
+
+/* Button styles */
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #61dafb;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #46a5d1;
+}

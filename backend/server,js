@@ -1,0 +1,22 @@
+import express, { json } from 'express';
+import cors from 'cors';
+import routes from './routes';
+import { connect } from 'mongoose';
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+const dbPassword = 'your_db_password'; // Replace with your actual password
+const dbURI = `mongodb+srv://dimuthuaro:${dbPassword}@clusteraro.hdpt012.mongodb.net/?retryWrites=true&w=majority&appName=ClusterAro`;
+
+connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected successfully'))
+    .catch(err => console.log('MongoDB connection error:', err));
+
+app.use(cors());
+app.use(json());
+app.use('/api', routes);
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
